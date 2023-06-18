@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Reader extends User implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static List<String> registeredUsernames = new ArrayList<>();
 	
 	public Reader(String username, String password, String name, String email) {
