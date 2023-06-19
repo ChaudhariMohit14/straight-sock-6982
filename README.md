@@ -1,6 +1,4 @@
-# straight-sock-6982
-
-NewGlobe Application
+# NewGlobe Application
 
 This is a console-based Java project that simulates a news application with three key roles: Administrator, Journalist, and Reader. The project allows users to perform various actions based on their roles, such as login, signup, browsing news articles, creating, publishing, and editing articles.
 
