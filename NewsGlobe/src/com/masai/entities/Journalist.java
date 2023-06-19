@@ -4,7 +4,7 @@ import java.util.List;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import com.masai.services.Article;
+import com.masai.services.Article1;
 
 public class Journalist extends User implements Serializable {
 	
@@ -12,7 +12,7 @@ public class Journalist extends User implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private List<Article> articles;
+	private List<Article1> articles;
 
 	public Journalist(String username, String password, String name, String email) {
         super(username, password, name, email);
@@ -34,21 +34,21 @@ public class Journalist extends User implements Serializable {
     }
 	
 	public void createArticle(String title, String content) {
-        Article article = new Article(title, content, this, null, null);
+        Article1 article = new Article1(title, content, this, null, null);
         articles.add(article);
         System.out.println("Article created: " + article.getTitle());
     }
 	
-	public void addArticle(Article article) {
+	public void addArticle(Article1 article) {
 	    articles.add(article);
 	    System.out.println("Article added successfully!");
 	}
 	
-	public List<Article> getArticles() {
+	public List<Article1> getArticles() {
         return articles;
     }
 
-    public void publishArticle(Article article) {
+    public void publishArticle(Article1 article) {
     	if (article.isPublished()) {
             System.out.println("Article is already published.");
         } else {
@@ -58,7 +58,7 @@ public class Journalist extends User implements Serializable {
         }
     }
 
-    public void editArticle(Article article, String newContent) {
+    public void editArticle(Article1 article, String newContent) {
     	if (!article.isPublished()) {
             // Update the article content
             article.setContent(newContent);

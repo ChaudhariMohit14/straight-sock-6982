@@ -1,8 +1,9 @@
 package com.masai;
 
 import java.util.ArrayList;
+
+
 import java.util.List;
-import java.util.Locale.Category;
 import java.util.Scanner;
 import java.io.*;
 
@@ -11,8 +12,12 @@ import com.masai.entities.Reader;
 import com.masai.services.*;
 
 public class Main implements Serializable{
-    private static List<User> users = new ArrayList<>();
-    private static List<Article> articles = new ArrayList<>();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static List<User> users = new ArrayList<>();
+    private static List<Article1> articles = new ArrayList<>();
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -28,7 +33,7 @@ public class Main implements Serializable{
             User loggedInUser = null;
 
             while (!exit) {
-                System.out.println("Choose an option:");
+                System.out.println("Main Menu:");
                 System.out.println("1. Reader Login");
                 System.out.println("2. Reader Signup");
                 System.out.println("3. Journalist Login");
@@ -224,13 +229,13 @@ public class Main implements Serializable{
         }
     }
 
-    private static void browseNewsArticles(List<Article> articles) {
+    private static void browseNewsArticles(List<Article1> articles) {
         System.out.println("\nBrowse News Articles");
 
         if (articles.isEmpty()) {
             System.out.println("No articles available.");
         } else {
-            for (Article article : articles) {
+            for (Article1 article : articles) {
                 System.out.println("- " + article.getTitle() + " (" + article.getCategory() + ")");
                 System.out.println("Published on: " + article.getPublishedDate());
                 System.out.println();
@@ -279,7 +284,7 @@ public class Main implements Serializable{
         System.out.println("Enter content: ");
         String content = scanner.nextLine();
 
-        Article article = new Article(title, content, journalist, null, null);
+        Article1 article = new Article1(title, content, journalist, null, null);
         journalist.addArticle(article);
 
         System.out.println("Article created successfully!");
@@ -290,7 +295,7 @@ public class Main implements Serializable{
         System.out.println("Enter the index of the article you want to edit:");
 
         // Display the articles written by the journalist
-        List<Article> articles = journalist.getArticles();
+        List<Article1> articles = journalist.getArticles();
 
         for (int i = 0; i < articles.size(); i++) {
             System.out.println(i + 1 + ". " + articles.get(i).getTitle());
@@ -299,7 +304,7 @@ public class Main implements Serializable{
         int articleIndex = Integer.parseInt(scanner.nextLine()) - 1;
 
         if (articleIndex >= 0 && articleIndex < articles.size()) {
-            Article selectedArticle = articles.get(articleIndex);
+            Article1 selectedArticle = articles.get(articleIndex);
 
             System.out.println("Enter new content: ");
             String newContent = scanner.nextLine();
@@ -317,7 +322,7 @@ public class Main implements Serializable{
         System.out.println("Enter the index of the article you want to publish:");
 
         // Display the articles written by the journalist
-        List<Article> articles = journalist.getArticles();
+        List<Article1> articles = journalist.getArticles();
 
         for (int i = 0; i < articles.size(); i++) {
             System.out.println(i + 1 + ". " + articles.get(i).getTitle());
@@ -326,7 +331,7 @@ public class Main implements Serializable{
         int articleIndex = Integer.parseInt(scanner.nextLine()) - 1;
 
         if (articleIndex >= 0 && articleIndex < articles.size()) {
-            Article selectedArticle = articles.get(articleIndex);
+            Article1 selectedArticle = articles.get(articleIndex);
 
             if (!selectedArticle.isPublished()) {
                 selectedArticle.setPublished(true);
@@ -380,7 +385,7 @@ public class Main implements Serializable{
         int articleIndex = Integer.parseInt(scanner.nextLine()) - 1;
 
         if (articleIndex >= 0 && articleIndex < articles.size()) {
-            Article removedArticle = articles.remove(articleIndex);
+            Article1 removedArticle = articles.remove(articleIndex);
             System.out.println("Article removed successfully:");
             System.out.println(removedArticle.getTitle());
         } else {
@@ -400,7 +405,7 @@ public class Main implements Serializable{
         int articleIndex = Integer.parseInt(scanner.nextLine()) - 1;
 
         if (articleIndex >= 0 && articleIndex < articles.size()) {
-            Article selectedArticle = articles.get(articleIndex);
+            Article1 selectedArticle = articles.get(articleIndex);
 
             System.out.println("Enter new content: ");
             String newContent = scanner.nextLine();
