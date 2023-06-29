@@ -20,7 +20,7 @@ NewsGlobe is a console-based Java project, that is a news application with three
 
 ## Getting Started
 To get started with the NewsGlobe project, follow these steps:
-1. Clone the Repository: git clone
+1. Clone the Repository: git clone https://github.com/ChaudhariMohit14/straight-sock-6982.git
 2. Open the project in your preferred Java IDE.
 3. Run the project.
 
