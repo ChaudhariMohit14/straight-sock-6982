@@ -30,13 +30,13 @@ Java, Console-based interface
 ## How to Use
 1. Launch the NewsGlobe application.
 2. On the login screen, enter your credentials based on your assigned role: <br>
-   -Administrator: Enter your administrator username (admin) and password (admin)
-   -Journalist: Enter your journalist username (journalist) and password (12345)
-   -Reader: Enter your reader username and password which you entered during signup
+   -Administrator: Enter your administrator username (admin) and password (admin)  <br>
+   -Journalist: Enter your journalist username (journalist) and password (12345)  <br>
+   -Reader: Enter your reader username and password which you entered during signup  <br>
 3. Once logged in, you will be redirected to the corresponding role's dashboard.
-4. Perform the desired actions based on your role:
-   -Administrator: Edit or delete published articles.
-   -Journalist: Create, edit, and publish articles.
+4. Perform the desired actions based on your role: <br>
+   -Administrator: Edit or delete published articles.  <br>
+   -Journalist: Create, edit, and publish articles.  <br>
    -Reader: Browse through the published articles.
 
 ## Contact 
