@@ -29,7 +29,7 @@ Java, Console-based interface
 
 ## How to Use
 1. Launch the NewsGlobe application.
-2. On the login screen, enter your credentials based on your assigned role:
+2. On the login screen, enter your credentials based on your assigned role: <br>
    -Administrator: Enter your administrator username (admin) and password (admin)
    -Journalist: Enter your journalist username (journalist) and password (12345)
    -Reader: Enter your reader username and password which you entered during signup
